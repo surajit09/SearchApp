@@ -1,0 +1,43 @@
+<h4 ng-if="chartResults.data.items.length>0">We have found {{chartResults.data.items.length}} search results for {{ repo }}</h4>
+
+<div class="table table-striped" ng-repeat="s in chartResults.data.items">
+    
+    <div class="row">
+        
+    <div class="col-md-12">
+       
+       <div class="panel panel-default">
+          <div class="panel-heading">
+              <h5 class="panel-title"><a href="{{s.url}}"><b>{{s.full_name}}</b></a>&nbsp&nbsp&nbsp&nbsp Category:{{s.language}}</h5>
+          </div>
+          <div class="panel-body" >
+          
+                 <p >
+                  <svg width="100" height="100">
+                     
+                        
+                         <rect x="0" y="0" height="75" width="5" fill="grey"/>
+                         <rect x="5" y="75" height="5" width="75" fill="grey"/>
+                         
+                         
+                             <g transform="rotate(180) translate(-75,-75) ">
+                             <rect x="0" y="0" height="{{s.open_issues_count/10}}" width="5" fill="red"/>
+                             <rect x="15" y="0" height="{{s.forks_count/10}}" width="5" fill="green"/>
+                             <rect x="30" y="0" height="{{s.stargazers_count/10}}" width="5" fill="blue" />
+                             
+                             
+                        
+                      </g>
+                  </svg>
+        
+             <font color="red">Open Issues</font>&nbsp&nbsp<font color="green">Forks</font>&nbsp&nbsp<font color="blue">Stargazers</font>
+            </p>    
+         
+        </div>   
+        
+    </div>
+        
+    </div>
+    
+</div>
+

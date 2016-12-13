@@ -1,0 +1,26 @@
+<h4 ng-if="issueResults.data.items.length>0">We have found {{issueResults.data.items.length}} issues for {{ repo }}</h4>
+
+<div class="table table-striped" ng-repeat="i in issueResults.data.items">
+    
+    <div class="row">
+        
+    <div class="col-md-12">
+       
+       
+       <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Issue: {{i.body}}</h3>
+          </div>
+          <div class="panel-body">
+            Created: {{i.created_at | date }}
+            Status: {{i.state}}
+            Comments: <a href="{{i.comments_url}}">{{i.comments_url}}</a>
+          </div>
+        </div>
+
+        
+    </div>
+        
+    </div>
+    
+</div>

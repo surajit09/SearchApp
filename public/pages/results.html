@@ -1,0 +1,25 @@
+<h4 ng-if="searchResults.data.items.length>0">We have found {{searchResults.data.items.length}} search results for {{ repo }}</h4>
+
+<div class="table table-striped" ng-repeat="s in searchResults.data.items">
+    
+    <div class="row">
+        
+    <div class="col-md-12">
+       
+       <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title"><a href="{{s.url}}"><b>{{s.full_name}}</b></a>&nbsp&nbsp&nbsp&nbsp Category:{{s.language}}&nbsp&nbsp&nbsp&nbsp Forks: {{s.forks_count}}&nbsp&nbsp&nbsp&nbsp Stargazers: {{s.stargazers_count}}&nbsp&nbsp&nbsp&nbsp Open Issues: {{s.open_issues_count}}</h5>
+          </div>
+          <div class="panel-body">
+             {{s.description}} 
+            
+          </div>
+        </div>   
+        
+    </div>
+        
+    </div>
+    
+</div>
+
+
