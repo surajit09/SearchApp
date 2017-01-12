@@ -1,0 +1,21 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/surajit09/SearchApp",
+  "authors": [
+    "Surajit Mukherjee <surajit.mukherjee@carpetright.co.uk>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-mocks": "^1.6.1"
+  }
+}
